@@ -343,11 +343,22 @@ footer p {
   main {
 
     padding-inline: 3rem;
+
   }
 
   section {
     padding-inline: 3rem;
 
+  }
+  section>h2{
+
+
+
+    justify-content: center;
+  }
+
+  h2>span{
+    margin-left: 20px;
   }
 }
 
