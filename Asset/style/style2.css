@@ -333,10 +333,8 @@ footer p {
 
 @media screen and (min-width :700px) {
   main {
-
     padding-inline: 2rem;
   }
-
 }
 
 @media screen and (min-width :800px) {
@@ -347,7 +345,13 @@ footer p {
 
   section {
     padding-inline: 3rem;
+  }
+  section>h2{
+    justify-content: center;
+  }
 
+  h2>span{
+    margin-left: 20px;
   }
 }
 
