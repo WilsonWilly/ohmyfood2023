@@ -9,13 +9,15 @@ body {
   background: #f6f6f6;
 }
 
-
-
 nav {
   display: flex;
   background: #ffffff;
   height: 63px;
   box-shadow: 0px 2px 4px 0px #00000026;
+}
+
+nav a {
+  display: flex;
 }
 
 nav span {
@@ -42,12 +44,13 @@ nav .title h1 {
   font-size: 30px;
   line-height: 63px;
 }
-main{
-    background: white;
+
+main {
+  background: white;
 }
 
-main .box{
-    background: #F6F6F6;
+main .box {
+  background: #F6F6F6;
 }
 
 header .image {
@@ -66,31 +69,60 @@ section {
   padding: 32px 13px;
   border-radius: 50px 50px 0 0;
   position: relative;
- top: -44px;
-background: #F6F6F6;
-;}
+  top: -44px;
+  background: #F6F6F6;
+  ;
+}
 
-section > h2 {
+section>h2 {
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
   font-weight: 400;
   margin-bottom: 42px;
   display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-margin-top: 31px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 31px;
 }
 
-section .meal-container{
-   
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
+section .meal-container {
+
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
 }
 
-section .meal-container .meals > h3 {
+.meals {
+  animation: fadeIn 0.5s both;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 1s;
+}
+
+.delay-3 {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+section .meal-container .meals>h3 {
   position: relative;
   font-size: 16px;
   font-weight: 300;
@@ -98,7 +130,7 @@ section .meal-container .meals > h3 {
 
 }
 
-section .meal-container  .meals > h3::before {
+section .meal-container .meals>h3::before {
   content: "";
   position: absolute;
   width: 3%;
@@ -119,49 +151,94 @@ section .list-container {
   background: white;
   box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001a;
   border-radius: 15px;
-  padding: 15px;
+  /* padding: 15px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
+  width: 90%;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 69px;
+}
+
+section .description {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 85%;
+  transition: flex 1s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+section .description:hover {
+  flex: 1 1 75%;
 }
 
 section .description h2 {
   font-size: 18px;
   font-weight: 500;
+  padding-left: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
 }
 
 section .description p {
+  padding-left: 15px;
   font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.description + p {
-    
-    font-size: 15px;
-    font-weight: 700;
+.description+p {
+  font-size: 15px;
+  font-weight: 700;
+  flex: 1 0 15%;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-section .speciale-button{
-    display: flex;
-    justify-content: center;
-
-
-
+section .speciale-button {
+  display: flex;
+  justify-content: center;
 }
 
-section button{
-    height: 50px;
-    width: 186px;
-    border-radius: 25px;
-    text-align: center;
-    line-height: 50px;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-     margin-top: 30px;
-     color: white;
-     border: none;
+.tick {
+  background-color: #99E2D0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  flex: 2 2 55px;
+}
+
+.tick i {
+  font-size: 21px;
+}
+
+section button {
+  height: 50px;
+  width: 186px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  margin-top: 30px;
+  color: white;
+  border: none;
 }
 
 
@@ -170,120 +247,124 @@ section button{
 
 
 footer {
-    background: #353535;
-    color: #F7F7F7;
-    padding: 35px 20px;
+  background: #353535;
+  color: #F7F7F7;
+  padding: 35px 20px;
 
 }
 
 footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-weight: 400;
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: 15px;
+  font-family: 'Shrikhand', cursive;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 15px;
 }
 
 footer p span {
-    margin-right: 18px;
+  margin-right: 18px;
 
 }
 
 footer p {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 
 @media screen and (min-width:650px) {
-    
-    footer {
-        display: grid;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 0.5rem;
-        grid-template-areas: "a b c d e";
-    }
 
-    footer > h2{
+  footer {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    grid-template-areas: "a b c d e";
+  }
 
-        grid-area: e;
-        margin-left: 50px !important;
+  footer>h2 {
 
-
-    }
-
-    footer p:last-child{
-        grid-area: d;
-    }
+    grid-area: e;
+    margin-left: 50px !important;
 
 
-    footer p:nth-child(4) {
-        grid-area: c;
-    }
- footer p:nth-child(2) {
+  }
 
- }
+  footer p:last-child {
+    grid-area: d;
+  }
 
-    footer > *{
-       margin: 0 !important;
-       
 
-    }
+  footer p:nth-child(4) {
+    grid-area: c;
+  }
+
+  footer p:nth-child(2) {}
+
+  footer>* {
+    margin: 0 !important;
+
+
+  }
 
 
 }
 
 @media screen and (min-width :500px) {
-    section {
-        padding-inline: 2rem;
-    }
-    
+  section {
+    padding-inline: 2rem;
+  }
+
 }
 
 
 
 @media screen and (min-width :600px) {
-    main {
-        
-         padding-inline: 1rem; 
-    }
+  main {
 
-    section{
-         padding-inline: 3rem; 
+    padding-inline: 1rem;
+  }
 
-    }
+  section {
+    padding-inline: 3rem;
+
+  }
 }
 
 
 @media screen and (min-width :700px) {
-    main {
-        
-         padding-inline: 2rem; 
-    }
+  main {
+
+    padding-inline: 2rem;
+  }
 
 }
 
 @media screen and (min-width :800px) {
-    main {
-        
-         padding-inline: 3rem; 
-    }
-    section{
-        padding-inline: 3rem; 
+  main {
 
-   }
+    padding-inline: 3rem;
+  }
+
+  section {
+    padding-inline: 3rem;
+
+  }
 }
 
 @media screen and (min-width :900px) {
-    main, section{
-        
-         padding-inline: 5rem; 
-    } 
+
+  main,
+  section {
+
+    padding-inline: 5rem;
+  }
 }
 
 @media screen and (min-width :1100px) {
-    main, section{
-        
-         padding-inline: 10%; 
-    } 
+
+  main,
+  section {
+
+    padding-inline: 10%;
+  }
 }
