@@ -73,7 +73,7 @@ section {
   background: #f6f6f6;
 }
 
-section > h2 {
+section>h2 {
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
@@ -120,14 +120,14 @@ section .meal-container {
   }
 }
 
-section .meal-container .meals > h3 {
+section .meal-container .meals>h3 {
   position: relative;
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 20px;
 }
 
-section .meal-container .meals > h3::before {
+section .meal-container .meals>h3::before {
   content: "";
   position: absolute;
   width: 3%;
@@ -159,7 +159,7 @@ section .list-container {
   height: 69px;
 }
 
-.list-container .list > p {
+.list-container .list>p {
   padding-right: 1rem;
 }
 
@@ -262,7 +262,7 @@ footer p {
   margin-bottom: 7px;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 769px) {
   footer {
     display: grid;
     justify-content: flex-end;
@@ -271,7 +271,7 @@ footer p {
     grid-template-areas: "a b c d e";
   }
 
-  footer > h2 {
+  footer>h2 {
     grid-area: e;
     margin-left: 50px !important;
   }
@@ -284,59 +284,14 @@ footer p {
     grid-area: c;
   }
 
-  footer > * {
+  footer>* {
     margin: 0 !important;
   }
 }
 
-@media screen and (min-width: 500px) {
-  section {
-    padding-inline: 2rem;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  main {
-    padding-inline: 1rem;
-  }
-
-  section {
-    padding-inline: 3rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  main {
-    padding-inline: 2rem;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  main {
-    padding-inline: 3rem;
-  }
-
-  section {
-    padding-inline: 3rem;
-  }
-
-  section > h2 {
-    justify-content: center;
-  }
-
-  h2 > span {
-    margin-left: 20px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  main,
-  section {
-    padding-inline: 5rem;
-  }
-}
 
 @media screen and (min-width: 1100px) {
+
   main,
   section {
     padding-inline: 10%;
