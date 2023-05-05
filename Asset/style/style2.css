@@ -50,7 +50,7 @@ main {
 }
 
 main .box {
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 
 header .image {
@@ -70,11 +70,10 @@ section {
   border-radius: 50px 50px 0 0;
   position: relative;
   top: -44px;
-  background: #F6F6F6;
-  ;
+  background: #f6f6f6;
 }
 
-section>h2 {
+section > h2 {
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
@@ -88,7 +87,6 @@ section>h2 {
 }
 
 section .meal-container {
-
   display: flex;
   flex-direction: column;
   gap: 45px;
@@ -122,15 +120,14 @@ section .meal-container {
   }
 }
 
-section .meal-container .meals>h3 {
+section .meal-container .meals > h3 {
   position: relative;
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 20px;
-
 }
 
-section .meal-container .meals>h3::before {
+section .meal-container .meals > h3::before {
   content: "";
   position: absolute;
   width: 3%;
@@ -162,10 +159,13 @@ section .list-container {
   height: 69px;
 }
 
+.list-container .list > p {
+  padding-right: 1rem;
+}
+
 section .list:hover .tick {
   margin-right: 0;
 }
-
 
 section .description {
   display: flex;
@@ -173,7 +173,7 @@ section .description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
+  flex: 1;
   padding: 12px 16px 12px 15px;
   gap: 5px;
 }
@@ -206,7 +206,7 @@ section .description .price {
 }
 
 .tick {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: white;
   display: flex;
   align-items: center;
@@ -227,7 +227,7 @@ section button {
   border-radius: 25px;
   text-align: center;
   line-height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   margin-top: 30px;
   color: white;
   border: none;
@@ -240,16 +240,14 @@ section button {
 
 /* Footer */
 
-
 footer {
   background: #353535;
-  color: #F7F7F7;
+  color: #f7f7f7;
   padding: 35px 20px;
-
 }
 
 footer h2 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 18px;
   font-style: italic;
@@ -258,16 +256,13 @@ footer h2 {
 
 footer p span {
   margin-right: 18px;
-
 }
 
 footer p {
   margin-bottom: 7px;
 }
 
-
-@media screen and (min-width:650px) {
-
+@media screen and (min-width: 650px) {
   footer {
     display: grid;
     justify-content: flex-end;
@@ -276,63 +271,48 @@ footer p {
     grid-template-areas: "a b c d e";
   }
 
-  footer>h2 {
-
+  footer > h2 {
     grid-area: e;
     margin-left: 50px !important;
-
-
   }
 
   footer p:last-child {
     grid-area: d;
   }
 
-
   footer p:nth-child(4) {
     grid-area: c;
   }
 
-  footer>* {
+  footer > * {
     margin: 0 !important;
-
-
   }
-
-
 }
 
-@media screen and (min-width :500px) {
+@media screen and (min-width: 500px) {
   section {
     padding-inline: 2rem;
   }
-
 }
 
-
-
-@media screen and (min-width :600px) {
+@media screen and (min-width: 600px) {
   main {
-
     padding-inline: 1rem;
   }
 
   section {
     padding-inline: 3rem;
-
   }
 }
 
-
-@media screen and (min-width :700px) {
+@media screen and (min-width: 700px) {
   main {
     padding-inline: 2rem;
   }
 }
 
-@media screen and (min-width :800px) {
+@media screen and (min-width: 800px) {
   main {
-
     padding-inline: 3rem;
   }
 
@@ -340,29 +320,25 @@ footer p {
     padding-inline: 3rem;
   }
 
-  section>h2 {
+  section > h2 {
     justify-content: center;
   }
 
-  h2>span {
+  h2 > span {
     margin-left: 20px;
   }
 }
 
-@media screen and (min-width :900px) {
-
+@media screen and (min-width: 900px) {
   main,
   section {
-
     padding-inline: 5rem;
   }
 }
 
-@media screen and (min-width :1100px) {
-
+@media screen and (min-width: 1100px) {
   main,
   section {
-
     padding-inline: 10%;
   }
 }
