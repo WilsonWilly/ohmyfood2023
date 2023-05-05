@@ -151,12 +151,10 @@ section .list-container {
   background: white;
   box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001a;
   border-radius: 15px;
-  /* padding: 15px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  width: 90%;
+  width: 100%;
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
@@ -164,54 +162,47 @@ section .list-container {
   height: 69px;
 }
 
+section .list:hover .tick {
+  margin-right: 0;
+}
+
+
 section .description {
   display: flex;
   flex-direction: column;
-  flex: 1 0 85%;
-  transition: flex 1s;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-section .description:hover {
-  flex: 1 1 75%;
+  width: 100%;
+  padding: 12px 16px 12px 15px;
+  gap: 5px;
 }
 
 section .description h2 {
   font-size: 18px;
   font-weight: 500;
-  padding-left: 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-}
-
-section .description p {
-  padding-left: 15px;
-  font-size: 15px;
-  font-weight: 300;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.description+p {
-  font-size: 15px;
-  font-weight: 700;
-  flex: 1 0 15%;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 18px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-section .speciale-button {
+section .description .sub-title {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+section .description span {
+  font-weight: 300;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+
+section .description .price {
+  font-weight: 700;
 }
 
 .tick {
@@ -220,9 +211,10 @@ section .speciale-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-
-  flex: 2 2 55px;
+  height: 69px;
+  width: 60px;
+  margin-right: -60px;
+  transition: all 0.4s linear;
 }
 
 .tick i {
@@ -241,7 +233,10 @@ section button {
   border: none;
 }
 
-
+.speciale-button {
+  display: flex;
+  justify-content: center;
+}
 
 /* Footer */
 
@@ -298,8 +293,6 @@ footer p {
     grid-area: c;
   }
 
-  footer p:nth-child(2) {}
-
   footer>* {
     margin: 0 !important;
 
@@ -346,11 +339,12 @@ footer p {
   section {
     padding-inline: 3rem;
   }
-  section>h2{
+
+  section>h2 {
     justify-content: center;
   }
 
-  h2>span{
+  h2>span {
     margin-left: 20px;
   }
 }

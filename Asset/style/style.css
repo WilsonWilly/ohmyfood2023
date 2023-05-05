@@ -302,12 +302,10 @@ div.spinner::after {
         grid-area: c;
     }
 
-    footer p:nth-child(2) {}
+
 
     footer>* {
         margin: 0 !important;
-
-
     }
 
 
